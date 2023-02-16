@@ -14,7 +14,9 @@ app.get('/', (req, res) => {
 });
 
 app.get("/blog", (req, res) => {
-  res.json({ data: blog.blogs });
+  const sortedBlogs = blog.blogs;
+  sortedBlogs.sort((a, b) => new Date(b.date) - new Date(a.date))
+  res.json({ data: sortedBlogs });
 });
 
 app.get("/blog/:title", (req, res) => {
