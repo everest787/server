@@ -1,7 +1,12 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source:
+      type: GitHub
+      application: WebServer-CodeDeploy
+      repository: server
+      commitId: HEAD
+      fileExistsBehavior: OVERWRITE
     destination: /home/ec2-user/server/
 permissions:
   - object: /home/ec2-user/server/
@@ -15,4 +20,4 @@ hooks:
   AfterInstall:
     - location: scripts/start_server.sh
       timeout: 300
-      runas: ec2-
+      runas: ec2-user
