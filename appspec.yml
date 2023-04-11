@@ -1,12 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source:
-      type: GitHub
-      application: WebServer-CodeDeploy
-      repository: everest787/server
-      commitId: HEAD
-      fileExistsBehavior: OVERWRITE
+  - source: /
     destination: /home/ec2-user/server/
 permissions:
   - object: /home/ec2-user/server/
