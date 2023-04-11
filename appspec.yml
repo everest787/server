@@ -4,7 +4,7 @@ files:
   - source:
       type: GitHub
       application: WebServer-CodeDeploy
-      repository: server
+      repository: everest787/server
       commitId: HEAD
       fileExistsBehavior: OVERWRITE
     destination: /home/ec2-user/server/
