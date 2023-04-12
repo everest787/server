@@ -9,7 +9,7 @@ node index.js &
 PID=$!
 
 # loop that checks if the server is reachable and will keep running until the server is up
-while ! curl -s http://localhost:3000 >/dev/null; do
+while ! curl -s http://localhost:3001 >/dev/null; do
     sleep 1
 done
 
