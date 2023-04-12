@@ -8,10 +8,5 @@ npm install
 node index.js &
 PID=$!
 
-# loop that checks if the server is reachable and will keep running until the server is up
-while ! curl -s http://localhost:3001 >/dev/null; do
-    sleep 1
-done
-
 # exit with a message indicating the server's process ID.
 echo "Server is running with PID ${PID}."
