@@ -10,3 +10,4 @@ PID=$!
 
 # exit with a message indicating the server's process ID.
 echo "Server is running with PID ${PID}."
+exit 0
