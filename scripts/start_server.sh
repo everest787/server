@@ -4,10 +4,7 @@
 cd /home/ec2-user/server
 npm install
 
-#starts the server in the background, saves its process ID
+#starts the server in the background
 node index.js &
-PID=$!
 
-# exit with a message indicating the server's process ID.
-echo "Server is running with PID ${PID}."
 exit 0
