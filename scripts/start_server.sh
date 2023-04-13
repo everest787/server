@@ -4,10 +4,8 @@
 cd /home/ec2-user/server
 npm install
 
-#starts the server in the background
-node index.js &
+# Start the server in the background using nohup
+nohup node index.js >/dev/null 2>&1 &
 
-# Close STDOUT file descriptor
-exec 1>&-
-
+# Exit the script with a successful status code
 exit 0
